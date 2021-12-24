@@ -35,9 +35,9 @@ class Data_input():
         data_frame = pd.read_csv(temp_file_name)
 
         if os.path.exists(temp_file_name):
-            #os.remove(temp_file_name)
-            print("hi")
-        print(data_frame)
+            os.remove(temp_file_name)
+
+        return data_frame
 
 m = Data_input("electricity_input.csv")
 m.inputter()
